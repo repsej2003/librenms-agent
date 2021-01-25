@@ -1,0 +1,10 @@
+#!/usr/bin/php
+<?php
+$data = shell_exec('/usr/sbin/conntrack -C');
+
+$number_of_connections = trim($data);
+
+echo "<<<conntrack>>>\n";
+echo "$number_of_connections\n";
+
+?>
